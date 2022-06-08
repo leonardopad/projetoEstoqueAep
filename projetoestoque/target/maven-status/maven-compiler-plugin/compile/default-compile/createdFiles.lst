@@ -1,0 +1,12 @@
+leonardo\projeto\estoque\projetoestoque\model\repositories\ColaboradorRepository.class
+leonardo\projeto\estoque\projetoestoque\domain\enuns\Permissao.class
+leonardo\projeto\estoque\projetoestoque\services\ColaboradorService.class
+leonardo\projeto\estoque\projetoestoque\services\defaultservices\ColaboradorDefaultService.class
+leonardo\projeto\estoque\projetoestoque\services\defaultservices\FornecedorDefaultService.class
+leonardo\projeto\estoque\projetoestoque\ProjetoestoqueApplication.class
+leonardo\projeto\estoque\projetoestoque\domain\Colaborador.class
+leonardo\projeto\estoque\projetoestoque\controller\FornecedorController.class
+leonardo\projeto\estoque\projetoestoque\services\FornecedorService.class
+leonardo\projeto\estoque\projetoestoque\model\repositories\FornecedorRepository.class
+leonardo\projeto\estoque\projetoestoque\domain\Fornecedor.class
+leonardo\projeto\estoque\projetoestoque\controller\ColaboradorController.class

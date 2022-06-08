@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Alterar Fornecedor</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <form action="#" th:action="@{/fornecedor/salvar}" th:object="${fornecedor}" method="post">
+        <input type="hidden" th:field="*{idFornecedor}"/>
+        
+        <label for="nomeFornecedor">Nome do Fornecedor</label>
+        <input type="text" th:field="*{nomeFornecedor}" id="nomeFornecedor" placeholder="Nome do Fornecedor">
+                
+        <label for="cnpj">cnpj</label>
+        <input type="text" th:field="*{cnpj}" id="cnpj" placeholder="cnpj" />
+        <input type="submit" value="Alterar Fornecedor">   
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<td>ID</td>
+				<td>Login</td>
+				<td>Permissão</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="colaborador : ${colaboradores}">
+				<td th:text="${colaborador.idColaborador}" ></td>
+				<td th:text="${colaborador.Login}" ></td>
+				<td th:text="${colaborador.permissao}" ></td>
+				<td><a th:href="@{/colaborador/alterarCadastro/{id}(id=${colaborador.idColaborador})}"> Alterar</a></td>
+			</tr>
+		</tbody>
+	</table>
+	<button><a th:href="@{/colaborador/cadastrar}">Cadastrar</a></button>
+</body>
+</html>
