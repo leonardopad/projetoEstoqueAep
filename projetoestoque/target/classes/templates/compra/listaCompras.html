@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Lista de Compras</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<td>ID</td>
+				<td>Data da Compra</td>
+				<td>Fornecedor</td>
+				<td>Produtos</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="compra : ${compras}">
+				<td th:text="${comra.dataCompra}" ></td>
+				<td th:text="${compra.Fornecedor}" ></td>
+				<td th:text="${compra.produto}" ></td>
+				<td><a th:href="@{/compra/alterarCadastro/{id}(id=${compra.idCompra})}"> Alterar</a></td>
+			</tr>
+		</tbody>
+	</table>
+	<button><a th:href="@{/compra/cadastrar}">Cadastrar</a></button>
+</body>
+</html>

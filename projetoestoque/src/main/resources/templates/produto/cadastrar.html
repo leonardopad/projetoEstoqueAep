@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Cadastrar Produto</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <form action="#" th:action="@{/produto/salvar}" th:object="${produto}" method="post">
+         <input type="hidden" th:field="*{idProduto}"/>
+        <label for="nome">Nome do Produto</label>
+        <input type="text" th:field="*{nome}" id="nome" placeholder="Nome do Produto">
+                
+        <label for="quantidade">quantidade</label>
+        <input type="number" th:field="*{quantidade}" id="quantidade" placeholder="quantidade" />
+        
+        <select name="tipo">
+            <option th:each="tipos : ${T(leonardo.projeto.estoque.projetoestoque.domain.enums.TipoProduto).values()}"
+                th:value="${tipos.cod}" th:text="${tipos.tipoProduto}"></option>
+        </select>
+        
+        <select name="situacao">
+            <option th:each="situacoes : ${T(leonardo.projeto.estoque.projetoestoque.domain.enums.SituacaoProduto).values()}"
+                th:value="${situacoes.cod}" th:text="${situacoes.situacaoProduto}"></option>
+        </select>
+        
+        <label for="validade">validade</label>
+        <input type="date" th:field="*{validade}" id="validade" placeholder="validade" />
+        
+        <input type="submit" value="Cadastrar Produto">   
+    </form>
+</body>
+</html>

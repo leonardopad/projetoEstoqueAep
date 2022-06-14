@@ -1,19 +1,23 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
-    <title>Getting Started: Serving Web Content</title> 
+    <title>Cadastro de Fornecedores</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
     <form action="#" th:action="@{/colaborador/salvar}" th:object="${colaborador}" method="post">
+        <input type="hidden" th:field="*{idColaborador}"/>
+       
         <label for="login">Login</label>
         <input type="text" th:field="*{login}" id="login" placeholder="Login">
                 
         <label for="senha">Senha</label>
         <input type="text" th:field="*{password}" id="password" placeholder="password" />
         
-        <label for="permissao">Permissao</label>
-        <input type="number" th:field="*{permissao}" id="permissao" placeholder="permissao">
+        <select name="permissao">
+            <option th:each="permissoes : ${T(leonardo.projeto.estoque.projetoestoque.domain.enums.Permissao).values()}"
+                th:value="${permissoes.cod}" th:text="${permissoes.permissao}"></option>
+        </select>
         
         <input type="submit" value="Add User">   
     </form>

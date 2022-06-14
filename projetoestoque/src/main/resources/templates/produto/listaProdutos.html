@@ -8,19 +8,25 @@
 		<thead>
 			<tr>
 				<td>ID</td>
-				<td>Nome do Fornecedor</td>
-				<td>Quantidade de compras</td>
+				<td>Nome do Produto</td>
+				<td>Quantidade</td>
+				<td>Tipo</td>
+				<td>Situação</td>
+				<td>Validade</td>
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="fornecedor : ${fornecedores}">
-				<td th:text="${fornecedor.idFornecedor}" ></td>
-				<td th:text="${fornecedor.nomeFornecedor}" ></td>
-				<td th:text="${fornecedor.compras}" ></td>
-				<td><a th:href="@{/fornecedor/alterarCadastro/{id}(id=${fornecedor.idFornecedor})}"> Alterar</a></td>
+			<tr th:each="produto : ${produtos}">
+				<td th:text="${produto.idProduto}" ></td>
+				<td th:text="${produto.nome}" ></td>
+				<td th:text="${produto.quantidade}" ></td>
+				<td th:text="${produto.tipo}" ></td>
+				<td th:text="${produto.situacao}" ></td>
+				<td th:text="${#dates.format(produto.validade, 'dd/MM/yyyy')}">
+				<td><a th:href="@{/produto/alterarCadastro/{id}(id=${produto.idProduto})}"> Alterar</a></td>
 			</tr>
 		</tbody>
 	</table>
-	<button><a th:href="@{/fornecedor/cadastrar}">Cadastrar</a></button>
+	<button><a th:href="@{/produto/cadastrar}">Cadastrar</a></button>
 </body>
 </html>

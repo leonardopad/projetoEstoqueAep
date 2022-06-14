@@ -16,7 +16,7 @@ public class Colaborador implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idColaborador;
 	
-	private String Login;
+	private String login;
 	private String password;
 	private Integer permissao;
 	
@@ -27,7 +27,7 @@ public class Colaborador implements Serializable {
 	public Colaborador(Integer idColaborador, String login, String password, Integer permissao) {
 		super();
 		this.idColaborador = idColaborador;
-		Login = login;
+		this.login = login;
 		this.password = password;
 		this.permissao = permissao;
 	}
@@ -41,11 +41,11 @@ public class Colaborador implements Serializable {
 	}
 
 	public String getLogin() {
-		return Login;
+		return login;
 	}
 
 	public void setLogin(String login) {
-		Login = login;
+		this.login = login;
 	}
 
 	public String getPassword() {

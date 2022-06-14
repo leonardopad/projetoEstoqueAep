@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import leonardo.projeto.estoque.projetoestoque.domain.Fornecedor;
 import leonardo.projeto.estoque.projetoestoque.domain.Produto;
 import leonardo.projeto.estoque.projetoestoque.services.ProdutoService;
 
@@ -34,7 +33,7 @@ public class ProdutoController {
 	
 	@PostMapping("/salvar")
 	public String cadastrar(Produto produto) {
-		ProdutoService.salvar(produto);
+		produtoService.salvar(produto);
 		return "redirect:/produto";
 	}
 	
@@ -42,7 +41,7 @@ public class ProdutoController {
 	public String alterar(Model model, @PathVariable(value="id") Integer idProduto){
 		Produto produto = produtoService.buscarPorId(idProduto);
 		model.addAttribute("produto", produto);
-		return "produto/alterar";
+		return "produto/cadastrar";
 	}
 	
 }

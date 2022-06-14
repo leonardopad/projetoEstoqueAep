@@ -3,10 +3,8 @@ package leonardo.projeto.estoque.projetoestoque.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -45,8 +43,14 @@ public class ColaboradorController  {
 	public String alterar(Model model, @PathVariable(value="id") Integer idColaborador){
 		Colaborador colaborador = colaboradorService.buscarPorId(idColaborador);
 		model.addAttribute("colaborador", colaborador);
-		return "colaborador/alterar";
+		return "colaborador/cadastrar";
 	}
 	
+	@GetMapping("/login")
+	public Boolean validaColaborador() {
+		
+		
+		return true;
+	}
 	
 }

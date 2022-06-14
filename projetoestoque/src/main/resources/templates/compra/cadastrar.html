@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Cadastrar Compra</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <form action="#" th:action="@{/compra/salvar}" th:object="${compra}" method="post">
+      <select name="fornecedor">
+      	<option th:each="fornecedor : ${fornecedorList}" th:value="${fornecedor.idFornecedor}" 
+      	th:text="${fornecedor.nomeFornecedor}"></option>
+      </select>
+        <br>
+        <label for="nomeProduto">Nome do Produto</label>
+        <input type="text" id="nomeProduto" placeholder="Nome Produto" />
+
+        <label for="quantidade">Quantidade</label>
+        <input type="number" id="quantidade" placeholder="Quantidade" />
+
+        <label for="validade">Validade</label>
+        <input type="date" id="validade" placeholder="Validade" />
+
+        <select name="tipo" id="tipo">
+            <option value="1">Perecivel</option>
+            <option value="2">Não Perecivel</option>
+        </select>
+
+        <select name="situacao" id="situacao">
+            <option value="1">Aberto</option>
+            <option value="2">Fechado</option>
+        </select>
+
+        <br>
+
+        <div class="produtos-adicionados">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Nome do Produto</td>
+                        <td>Quantidade</td>
+                        <td>Validade</td>
+                        <td>Tipo</td>
+                        <td>Situacao</td>
+                    </tr>
+                </thead>
+                <tbody id="list-body">
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <input type="submit" value="Comprar" />
+    </form>  
+    <button onclick="addCompra()">Adicionar produto</button>
+    <script th:src="@{/js/compra.js}" type="text/javascript"></script>
+</body>
+</html>

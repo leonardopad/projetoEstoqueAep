@@ -41,6 +41,6 @@ public class FornecedorController {
 	public String alterar(Model model, @PathVariable(value="id") Integer idFornecedor){
 		Fornecedor fornecedor = fornecedorService.buscarPorId(idFornecedor);
 		model.addAttribute("fornecedor", fornecedor);
-		return "fornecedor/alterar";
+		return "fornecedor/cadastrar";
 	}
 }

@@ -1,11 +1,15 @@
 package leonardo.projeto.estoque.projetoestoque.domain;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Fornecedor {
@@ -18,6 +22,9 @@ public class Fornecedor {
 	private String cnpj;
 	private String nomeFornecedor;
 	private Integer compras;
+	
+	@OneToMany(mappedBy = "fornecedor")
+	private List<Compra> comprasFornecedor = new ArrayList<>();
 	
 	public Fornecedor() {
 		super();
@@ -63,6 +70,14 @@ public class Fornecedor {
 		this.compras = compras;
 	}
 	
+	public List<Compra> getComprasFornecedor() {
+		return comprasFornecedor;
+	}
+
+	public void setComprasFornecedor(List<Compra> comprasFornecedor) {
+		this.comprasFornecedor = comprasFornecedor;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(idFornecedor);
