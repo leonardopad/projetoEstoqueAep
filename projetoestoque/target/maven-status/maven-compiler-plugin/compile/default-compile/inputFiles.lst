@@ -4,11 +4,14 @@ C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\controll
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\model\repositories\CompraRepository.java
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\domain\Compra.java
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\services\defaultservices\ColaboradorDefaultService.java
+C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\springsecurity\SecurityConfiguration.java
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\model\repositories\ColaboradorRepository.java
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\services\defaultservices\ProdutoDefaultService.java
+C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\model\DTO\ProdutoDTO.java
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\services\defaultservices\FornecedorDefaultService.java
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\domain\Produto.java
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\services\ColaboradorService.java
+C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\controller\HomePageController.java
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\domain\enums\Permissao.java
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\controller\ColaboradorController.java
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\services\ProdutoService.java
@@ -16,6 +19,7 @@ C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\Projetoe
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\model\repositories\ProdutoRepository.java
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\domain\enums\TipoProduto.java
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\domain\Fornecedor.java
+C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\model\DTO\CompraDTO.java
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\model\repositories\FornecedorRepository.java
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\services\CompraService.java
 C:\projetoestoque\src\main\java\leonardo\projeto\estoque\projetoestoque\services\defaultservices\CompraDefaultService.java

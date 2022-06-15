@@ -1,11 +1,12 @@
 const listBody = document.getElementById("list-body");
-
+var produto = new Array();
 
 function addCompra (){
 	const nomeProduto = document.getElementById("nomeProduto").value;
 	const quantidade = document.getElementById("quantidade").value;
 	const validade = document.getElementById("validade").value;
-	
+	const tipoValue = document.getElementById("tipo").value;
+	const situacaoValue = document.getElementById("situacao").value;
 	const tipo = document.getElementById("tipo");
 	const tipoSelecionado = tipo.options[tipo.selectedIndex].text;
 	const situacao = document.getElementById("situacao");
@@ -35,4 +36,37 @@ function addCompra (){
 	tr.appendChild(tdTipo);
 	tr.appendChild(tdSituacao);
 	listBody.appendChild(tr);
+	
+	pegarDados(nomeProduto, quantidade, validade, tipoValue, situacaoValue);
 }
+
+function pegarDados(nomeProduto, quantidade, validade, tipo, situacao){
+	var produtos = {
+		"nome": nomeProduto, 
+		"quantidade" : quantidade,
+		"validade" : validade,
+		"tipo" : tipo,
+		"situacao" : situacao
+	}
+	produto.push(produtos);
+}
+
+function salvarDados(){
+	
+	var dados = {
+		fornecedor : $("#fornecedor").val(),
+		produto : produto
+	}
+	
+	$.ajax({
+		url : "/compra/salvar",
+		type : 'post',
+		data : JSON.stringify(dados),
+		dataType : "json",
+		processData : false,
+		contentType : "application/json"
+	}).done(function(){
+		
+	})
+}
+

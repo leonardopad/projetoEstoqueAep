@@ -9,6 +9,10 @@ leonardo\projeto\estoque\projetoestoque\domain\Colaborador.class
 leonardo\projeto\estoque\projetoestoque\services\ProdutoService.class
 leonardo\projeto\estoque\projetoestoque\controller\FornecedorController.class
 leonardo\projeto\estoque\projetoestoque\model\repositories\CompraRepository.class
+leonardo\projeto\estoque\projetoestoque\springsecurity\SecurityConfiguration.class
+leonardo\projeto\estoque\projetoestoque\model\DTO\CompraDTO.class
+leonardo\projeto\estoque\projetoestoque\model\DTO\ProdutoDTO.class
+leonardo\projeto\estoque\projetoestoque\controller\HomePageController.class
 leonardo\projeto\estoque\projetoestoque\controller\CompraController.class
 leonardo\projeto\estoque\projetoestoque\domain\enums\SituacaoProduto.class
 leonardo\projeto\estoque\projetoestoque\model\repositories\FornecedorRepository.class
