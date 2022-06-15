@@ -8,11 +8,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import leonardo.projeto.estoque.projetoestoque.domain.Compra;
 import leonardo.projeto.estoque.projetoestoque.domain.Fornecedor;
 import leonardo.projeto.estoque.projetoestoque.domain.Produto;
+import leonardo.projeto.estoque.projetoestoque.model.DTO.CompraDTO;
 import leonardo.projeto.estoque.projetoestoque.services.CompraService;
 import leonardo.projeto.estoque.projetoestoque.services.FornecedorService;
 import leonardo.projeto.estoque.projetoestoque.services.ProdutoService;
@@ -32,7 +34,7 @@ public class CompraController {
 	
 	@GetMapping
 	public String listar(Model model) {
-		model.addAttribute("Compras: ",compraService.listar());
+		model.addAttribute("compras", compraService.listar());
 		return "compra/listaCompras";
 	}
 	
@@ -47,10 +49,12 @@ public class CompraController {
 		return "compra/cadastrar";
 	}
 	
+	
 	@PostMapping("/salvar")
-	public String salvar(Compra compra, List<Produto> produto) {
-		compraService.salvar(compra, produto);
-		return "redirect:compra";
+	public String salvar(@RequestBody CompraDTO compra) {
+		Compra com =  compraService.fromDTO(compra);
+		compraService.salvar(com);
+		return "redirect: /compra";
 	}
 	
 	@GetMapping("/alterarCadastro/{id}")

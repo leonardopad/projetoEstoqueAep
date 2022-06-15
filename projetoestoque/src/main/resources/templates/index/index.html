@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Página Principal</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <h3>QUALITÀ Manejo e controle de estoque</h3>
+         	<button><a th:href="@{/colaborador/cadastrar}">Cadastro de Colaborador</a></button>
+         	<button><a th:href="@{/fornecedor/cadastrar}">Cadastro de Fornecedor</a></button>
+         	<button><a th:href="@{/compra/cadastrar}">Cadastro de Compras</a></button>
+         	<button><a th:href="@{/colaborador/}">Lista de Colaboradores</a></button>
+         	<button><a th:href="@{/fornecedor/}">Lista de Fornecedores</a></button>
+         	<button><a th:href="@{/compra/}">Lista de Compras</a></button>
+         	<button><a th:href="@{/produto/}">Lista de Produtos</a></button>
+</body>
+</html>

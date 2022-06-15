@@ -25,7 +25,7 @@ public class Compra implements Serializable {
 	private Integer idCompra;
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private Date dataCompra;
+	private Date dataCompra = new Date();
 	
 	@OneToMany(mappedBy = "compra")
 	private List<Produto> produto = new ArrayList<>();

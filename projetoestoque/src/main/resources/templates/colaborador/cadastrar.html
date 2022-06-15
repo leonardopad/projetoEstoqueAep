@@ -12,7 +12,7 @@
         <input type="text" th:field="*{login}" id="login" placeholder="Login">
                 
         <label for="senha">Senha</label>
-        <input type="text" th:field="*{password}" id="password" placeholder="password" />
+        <input type="password" th:field="*{password}" id="password" placeholder="password" />
         
         <select name="permissao">
             <option th:each="permissoes : ${T(leonardo.projeto.estoque.projetoestoque.domain.enums.Permissao).values()}"
@@ -21,5 +21,6 @@
         
         <input type="submit" value="Add User">   
     </form>
+    <button><a th:href="@{/}">Home</a></button>
 </body>
 </html>

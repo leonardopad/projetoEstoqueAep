@@ -5,8 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <form action="#" th:action="@{/compra/salvar}" th:object="${compra}" method="post">
-      <select name="fornecedor">
+    
+      <select name="fornecedor" id="fornecedor">
       	<option th:each="fornecedor : ${fornecedorList}" th:value="${fornecedor.idFornecedor}" 
       	th:text="${fornecedor.nomeFornecedor}"></option>
       </select>
@@ -48,11 +48,11 @@
                 </tbody>
             </table>
         </div>
-
-
-        <input type="submit" value="Comprar" />
-    </form>  
-    <button onclick="addCompra()">Adicionar produto</button>
-    <script th:src="@{/js/compra.js}" type="text/javascript"></script>
+ 	<button onclick="addCompra()">Adicionar produto</button>
+    <button onclick="salvarDados()">Salvar compra</button>
+    <button><a th:href="@{/}">Home</a></button>
+    
 </body>
+<script th:src="@{/js/jquery.js}" type="text/javascript"></script>
+<script th:src="@{/js/compra.js}" type="text/javascript"></script>
 </html>

@@ -10,18 +10,17 @@
 				<td>ID</td>
 				<td>Data da Compra</td>
 				<td>Fornecedor</td>
-				<td>Produtos</td>
 			</tr>
 		</thead>
 		<tbody>
 			<tr th:each="compra : ${compras}">
-				<td th:text="${comra.dataCompra}" ></td>
-				<td th:text="${compra.Fornecedor}" ></td>
-				<td th:text="${compra.produto}" ></td>
-				<td><a th:href="@{/compra/alterarCadastro/{id}(id=${compra.idCompra})}"> Alterar</a></td>
+				<td th:text="${compra.idCompra}" ></td>
+				<td th:text="${compra.dataCompra}" ></td>
+				<td th:text="${compra.fornecedor.nomeFornecedor}" ></td>
 			</tr>
 		</tbody>
 	</table>
 	<button><a th:href="@{/compra/cadastrar}">Cadastrar</a></button>
+	<button><a th:href="@{/}">Home</a></button>
 </body>
 </html>
