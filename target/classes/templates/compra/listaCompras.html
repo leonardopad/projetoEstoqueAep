@@ -1,0 +1,31 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Lista de Compras</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+<h1 style="margin-top: 10px">Cadastro de Compras</h1>
+<button class="btn-primary" style="border-radius: 20px" onclick="window.location.href='/'">Home</button>
+<br>
+	<table>
+		<thead>
+			<tr>
+				<td>ID</td>
+				<td>Data da Compra</td>
+				<td>Fornecedor</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="compra : ${compras}">
+				<td th:text="${compra.idCompra}" ></td>
+				<td th:text="${compra.dataCompra}" ></td>
+				<td th:text="${compra.fornecedor.nomeFornecedor}" ></td>
+			</tr>
+		</tbody>
+	</table>
+	<button><a th:href="@{/compra/cadastrar}">Cadastrar</a></button>
+</div>
+</body>
+</html>

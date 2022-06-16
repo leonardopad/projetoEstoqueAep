@@ -1,0 +1,36 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Lista de Produtos</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1 style="margin-top: 10px">Lista de Produtos</h1>
+<button class="btn-primary" style="border-radius: 20px" onclick="window.location.href='/'">Home</button>
+<br>
+	<table>
+		<thead>
+			<tr>
+				<td>ID</td>
+				<td>Nome do Produto</td>
+				<td>Quantidade</td>
+				<td>Tipo</td>
+				<td>Situação</td>
+				<td>Validade</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="produto : ${produtos}">
+				<td th:text="${produto.idProduto}" ></td>
+				<td th:text="${produto.nome}" ></td>
+				<td th:text="${produto.quantidade}" ></td>
+				<td th:text="${produto.tipo}" ></td>
+				<td th:text="${produto.situacao}" ></td>
+				<td th:text="${#dates.format(produto.validade, 'dd/MM/yyyy')}">
+				<td><a th:href="@{/produto/alterarCadastro/{id}(id=${produto.idProduto})}"> Alterar</a></td>
+			</tr>
+		</tbody>
+	</table>
+	<button><a th:href="@{/produto/cadastrar}">Cadastrar</a></button>
+
+</body>
+</html>
