@@ -5,6 +5,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+   <div class="container">
+   <h1 style="margin-top: 10px">Cadastro de Colaboradores</h1>
+   <button class="btn-primary" style="border-radius: 20px" onclick="window.location.href='/'">Home</button>
+   <br>
     <form action="#" th:action="@{/colaborador/salvar}" th:object="${colaborador}" method="post">
         <input type="hidden" th:field="*{idColaborador}"/>
        
@@ -21,6 +25,6 @@
         
         <input type="submit" value="Add User">   
     </form>
-    <button><a th:href="@{/}">Home</a></button>
+   </div>
 </body>
 </html>
